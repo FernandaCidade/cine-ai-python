@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineIA — Assistente de Recomendações</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>CINE<span>IA</span></h1>
+    <p>Assistente de recomendações estilo Netflix, usando Azure OpenAI</p>
+  </header>
+
+  <section class="config">
+    <h2>1. Conexão</h2>
+    <p class="info">
+      A conexão com a Azure é realizada pelo backend Python.
+      Sua chave não fica exposta no navegador.
+    </p>
+    <span id="statusConfig">Verificando conexão...</span>
+  </section>
+
+  <section class="chat">
+    <h2>2. Converse com o assistente</h2>
+
+    <div id="mensagens" class="mensagens">
+      <div class="msg bot">
+        Olá! Eu sou o CineIA 🎬 Me conta o que você já assistiu e gostou,
+        ou o clima que você quer hoje (ação, comédia, suspense...) que eu te
+        indico algo pra ver.
+      </div>
+    </div>
+
+    <form id="formChat" class="form-chat">
+      <input
+        type="text"
+        id="campoMensagem"
+        placeholder="Ex: me recomende um filme de ação"
+        autocomplete="off"
+      >
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
